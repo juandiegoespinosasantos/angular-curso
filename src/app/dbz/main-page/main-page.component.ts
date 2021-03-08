@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Character } from '../interfaces/dbz.interface';
 
 @Component({
     selector: 'app-main-page',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent {
 
-    public add(): void {
-        console.log("Hey, hey!");
+    public characters: Character[] = [
+        {
+            name: "Gokú",
+            power: 15000
+        },
+        {
+            name: "Vegeta",
+            power: 8000
+        }
+    ];
+
+    public newCharacter: Character = {
+
+        name: "",
+        power: 0
     }
 }
